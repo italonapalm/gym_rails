@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!-- Title -->
+        <title>Modern | Layouts - Blank Page</title>
+
+        <meta content="width=device-width, initial-scale=1" name="viewport"/>
+        <meta charset="UTF-8">
+        <meta name="description" content="Admin Dashboard Template" />
+        <meta name="keywords" content="admin,dashboard" />
+        <meta name="author" content="Steelcoders" />
+
+        <%= csrf_meta_tags %>
+
+        <!-- Styles -->
+        <%= stylesheet_link_tag    'application', media: 'all' %>
+        <%= stylesheet_link_tag    'backoffice', media: 'all' %>
+        <%= javascript_include_tag 'backoffice-head' %>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+    </head>
+    <body class="page-header-fixed">
+        <div class="overlay"></div>
+        <%= render "layouts/shared_backoffice/chat" %>
+        <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
+            <h3><span class="pull-left">Sandra Smith</span> <a href="javascript:void(0);" class="pull-right" id="closeRight2"><i class="fa fa-angle-right"></i></a></h3>
+            <div class="slimscroll chat">
+                <div class="chat-item chat-item-left">
+                    <div class="chat-image">
+                        <%= image_tag('backoffice/avatar2.png', alt: "") %>
+                    </div>
+                    <div class="chat-message">
+                        Hi There!
+                    </div>
+                </div>
+                <div class="chat-item chat-item-right">
+                    <div class="chat-message">
+                        Hi! How are you?
+                    </div>
+                </div>
+                <div class="chat-item chat-item-left">
+                    <div class="chat-image">
+                        <%= image_tag('backoffice/avatar2.png', alt: "") %>
+                    </div>
+                    <div class="chat-message">
+                        Fine! do you like my project?
+                    </div>
+                </div>
+                <div class="chat-item chat-item-right">
+                    <div class="chat-message">
+                        Yes, It's clean and creative, good job!
+                    </div>
+                </div>
+                <div class="chat-item chat-item-left">
+                    <div class="chat-image">
+                        <%= image_tag('backoffice/avatar2.png', alt: "") %>
+
+                    </div>
+                    <div class="chat-message">
+                        Thanks, I tried!
+                    </div>
+                </div>
+                <div class="chat-item chat-item-right">
+                    <div class="chat-message">
+                        Good luck with your sales!
+                    </div>
+                </div>
+            </div>
+            <div class="chat-write">
+                <form class="form-horizontal" action="javascript:void(0);">
+                    <input type="text" class="form-control" placeholder="Say something">
+                </form>
+            </div>
+        </nav>
+
+        <%= render "layouts/shared_backoffice/profile" %>
+        <%= render "layouts/shared_backoffice/search" %>
+
+        <main class="page-content content-wrap">
+            <%= render "layouts/shared_backoffice/top_menu" %>
+
+            <%= render "layouts/shared_backoffice/navigation" %>
+
+            <div class="page-inner">
+                <div class="page-title">
+                    <h3>Blank Page</h3>
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Layouts</a></li>
+                            <li class="active">Blank Page</li>
+                        </ol>
+                    </div>
+                </div>
+                <div id="main-wrapper">
+                    <%= yield %>
+                </div><!-- Main Wrapper -->
+                <div class="page-footer">
+                    <p class="no-s">2015 &copy; Modern by Steelcoders.</p>
+                </div>
+            </div><!-- Page Inner -->
+        </main><!-- Page Content -->
+        <%= render "layouts/shared_backoffice/quick_navigation" %>
+        <div class="cd-overlay"></div>
+
+
+        <!-- Javascripts -->
+        <%= javascript_include_tag 'backoffice-body' %>
+
+
+    </body>
+</html>
