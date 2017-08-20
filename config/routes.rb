@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   namespace :backoffice do
+    resources :gyms
     get 'gyms/index'
   end
 

@@ -1496,7 +1496,7 @@ h5 {
 /* Modals */
 
 .modal {
-    z-index: 9999;
+    z-index: 9999999;
 }
 
 .modal-content {
@@ -1565,7 +1565,7 @@ h5 {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-    background: #22BAA0; 
+    background: #22BAA0;
     border-color: #22BAA0;
 }
 
@@ -1622,7 +1622,7 @@ h5 {
 .tab-content {
     padding: 15px;
     background: #fff;
-    
+
 }
 
 .nav-tabs > li > a {
@@ -2029,9 +2029,9 @@ ol.linenums {
 
 /* Tables */
 
-.table > tbody > tr > td, 
+.table > tbody > tr > td,
 .table > tbody > tr > th,
-.table > tfoot > tr > td, 
+.table > tfoot > tr > td,
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > thead > tr > th,
@@ -2063,7 +2063,7 @@ ol.linenums {
     outline: 0;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button.current, 
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
 .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
     color: #5f5f5f!important;
     border: 1px solid #ebebeb;
@@ -2167,7 +2167,7 @@ tr.group:hover {
 }
 
 .datepicker table tr td,
-.datepicker table tr th, 
+.datepicker table tr th,
 .datepicker table tr td span {
     border-radius: 0!important;
 }
@@ -2207,13 +2207,13 @@ tr.group:hover {
 .datepicker table tr td span.active.disabled:hover:focus,
 .datepicker table tr td span.active:active,
 .datepicker table tr td span.active:hover:active,
-.datepicker table tr td span.active.disabled:active, 
-.datepicker table tr td span.active.disabled:hover:active, 
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
 .datepicker table tr td span.active.active,
-.datepicker table tr td span.active:hover.active, 
-.datepicker table tr td span.active.disabled.active, 
-.datepicker table tr td span.active.disabled:hover.active, 
-.open .dropdown-toggle.datepicker table tr td span.active, 
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active,
+.open .dropdown-toggle.datepicker table tr td span.active,
 .open .dropdown-toggle.datepicker table tr td span.active:hover,
 .open .dropdown-toggle.datepicker table tr td span.active.disabled,
 .open .dropdown-toggle.datepicker table tr td span.active.disabled:hover {
@@ -2362,11 +2362,11 @@ tr.group:hover {
 }
 
 
-.fc button::-moz-focus-inner { 
-    margin: 0; 
-    padding: 0; 
+.fc button::-moz-focus-inner {
+    margin: 0;
+    padding: 0;
 }
-	
+
 .fc-state-default {
 	border: 1px solid;
 }
@@ -2555,7 +2555,7 @@ tr.group:hover {
 
 .top-menu .navbar-nav > li {
     height: 49px;
-} 
+}
 
 .top-menu .navbar-nav > li > a {
     display: block;
@@ -2564,7 +2564,7 @@ tr.group:hover {
     border: none;
     position: relative;
     line-height: 20px;
-} 
+}
 
 .top-menu .nav > li > a:hover,
 .top-menu .nav > li > a:focus,
@@ -2573,7 +2573,7 @@ tr.group:hover {
 .top-menu .nav .open > a:hover,
 .top-menu .nav .open > a:focus {
     background: transparent;
-} 
+}
 
 .top-menu .nav .open > a,
 .top-menu .nav .open > a:hover,
@@ -2732,7 +2732,7 @@ tr.group:hover {
 .dropdown-menu > li.active > a:focus {
     background: #F7F7F7;
     color: #333;
-} 
+}
 
 .drop-title {
     display: block;
@@ -2885,7 +2885,7 @@ tr.group:hover {
     display: block;
     width: 210px;
     text-overflow: ellipsis;
-    white-space: nowrap;   
+    white-space: nowrap;
     color: #a0a0a0;
     margin: 0px;
     float: left;
@@ -2941,7 +2941,7 @@ tr.group:hover {
     text-align: center;
     font-size: 12px;
 }
-    
+
 .tasks li a .task-details {
     display: block;
     font-size: 13px;
@@ -3139,16 +3139,16 @@ tr.group:hover {
     .horizontal-bar .accordion-menu > li > a > p {
         display: none;
     }
-    
+
     .compact-menu .horizontal-bar .accordion-menu > li > a > p {
         display: none!important;
     }
-    
+
     body:not(.small-sidebar) .horizontal-bar .accordion-menu > li > a > .menu-icon {
         float: none!important;
         margin: 0!important;
     }
-    
+
     .horizontal-bar .accordion-menu ul {
         top: 50px!important;
     }
@@ -3547,7 +3547,7 @@ body:not(.page-horizontal-bar):not(.small-sidebar) .menu.accordion-menu a {
 }
 
 .small-sidebar.page-sidebar-fixed:not(.page-horizontal-bar) .menu.accordion-menu li a p,
-.small-sidebar.page-sidebar-fixed:not(.page-horizontal-bar) .menu.accordion-menu li a .arrow, 
+.small-sidebar.page-sidebar-fixed:not(.page-horizontal-bar) .menu.accordion-menu li a .arrow,
 .small-sidebar.page-sidebar-fixed:not(.page-horizontal-bar) .menu.accordion-menu li.menu-title,
 .small-sidebar.page-sidebar-fixed:not(.page-horizontal-bar) .menu.accordion-menu li a .badge {
     display: none!important;
@@ -3567,7 +3567,7 @@ body:not(.page-horizontal-bar):not(.small-sidebar) .menu.accordion-menu a {
 .small-sidebar.page-sidebar-fixed:not(.page-horizontal-bar) .sidebar:hover .sidebar-header {
     display: block!important;
 }
-    
+
 .small-sidebar.page-sidebar-fixed:not(.page-horizontal-bar) .sidebar:hover .menu.accordion-menu li a p,
 .small-sidebar.page-sidebar-fixed:not(.page-horizontal-bar) .sidebar:hover .menu.accordion-menu li.menu-title {
     display: block!important;
@@ -4222,7 +4222,7 @@ body:not(.page-horizontal-bar):not(.small-sidebar) .menu.accordion-menu a {
 }
 
 .inbox-widget .inbox-item .inbox-item-date {
-    position: absolute; 
+    position: absolute;
     top: 2px;
     right: 7px;
     color: #a9a9a9;
@@ -4446,7 +4446,7 @@ body:not(.page-horizontal-bar):not(.small-sidebar) .menu.accordion-menu a {
 }
 
 .mailbox-nav li a:hover,
-.mailbox-nav .active a { 
+.mailbox-nav .active a {
     color: #333;
 }
 
@@ -4480,7 +4480,7 @@ body:not(.page-horizontal-bar):not(.small-sidebar) .menu.accordion-menu a {
 }
 
 .mailbox-content table tbody tr:hover {
-    background: #FAFAFA; 
+    background: #FAFAFA;
 }
 
 .mailbox-content table tbody tr.read {
@@ -4630,7 +4630,7 @@ body:not(.page-horizontal-bar):not(.small-sidebar) .menu.accordion-menu a {
 .page-error .details {
     margin-bottom: 20px;
     text-align: center;
-} 
+}
 
 .coming-soon .page-inner {
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/coming-soon.jpg');
@@ -4831,37 +4831,37 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
 
 
 /* Blue */
-.color-switcher .colorbox.color-blue { 
+.color-switcher .colorbox.color-blue {
     background-color: #12afcb;
 }
 
 
 /* Red */
-.color-switcher .colorbox.color-red { 
+.color-switcher .colorbox.color-red {
     background-color: #F25656;
 }
 
 
 /* Green  */
-.color-switcher .colorbox.color-green { 
+.color-switcher .colorbox.color-green {
     background-color: #22baa0;
 }
 
 
 /* Purple  */
-.color-switcher .colorbox.color-purple { 
+.color-switcher .colorbox.color-purple {
     background-color: #7a6fbe;
 }
 
 
 /* Black  */
-.color-switcher .colorbox.color-dark { 
+.color-switcher .colorbox.color-dark {
     background-color: #34425A;
 }
 
 
 /* White  */
-.color-switcher .colorbox.color-white { 
+.color-switcher .colorbox.color-white {
     background-color: #fff;
 }
 
@@ -4873,7 +4873,7 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
         right: 0;
         left: 0;
     }
-    
+
     .profile-info {
         top: 10px;
         right: 0;
@@ -4888,7 +4888,7 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
         margin: 0 10px 0 10px;
         display: inline-block;
     }
-    
+
     .mailbox-header h2 {
         margin: 20px 0;
         text-align: center;
@@ -4896,7 +4896,7 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
 }
 
 @media (max-width: 767px) {
-    
+
     .sidebar {
         opacity: 0;
         visibility: hidden;
@@ -4907,11 +4907,11 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
         -o-transition: opacity 0.3s ease-in-out;
         transition: opacity 0.3s ease-in-out;
     }
-    
+
     body:not(.page-header-fixed) .sidebar {
         padding-top: 0!important;
     }
-    
+
     .small-sidebar .sidebar.visible,
     .page-horizontal-bar .sidebar.visible {
         margin-right: -65px;
@@ -4924,7 +4924,7 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
         -o-transition: opacity 0.3s ease-in-out;
         transition: opacity 0.3s ease-in-out;
     }
-    
+
     body:not(.small-sidebar) .sidebar.visible {
         margin-right: -160px;
         opacity: 1;
@@ -4936,7 +4936,7 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
         -o-transition: opacity 0.3s ease-in-out;
         transition: opacity 0.3s ease-in-out;
     }
-    
+
     .small-sidebar .sidebar,
     .horizontal-bar {
         -webkit-transition: opacity 0.3s ease-in-out;
@@ -4944,7 +4944,7 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
         -o-transition: opacity 0.3s ease-in-out;
         transition: opacity 0.3s ease-in-out;
     }
-    
+
     .navbar .logo-box {
         margin: 0 auto;
         background: transparent!important;
@@ -4952,65 +4952,65 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
         width: 100%!important;
         border: 0!important;
     }
-    
+
     .navbar .logo-box a {
         color: #5F5F5F!important;
     }
-    
+
     .navbar .logo-box .logo-text {
         width: 100%;
         display: inline-block!important;
     }
-    
+
     .page-sidebar-fixed:not(.page-header-fixed) .logo-box {
         position: relative;
         display: block;
     }
-    
+
     .small-sidebar .navbar .logo-box a span {
         display: inline-block;
     }
-    
+
     .sidebar-pusher {
         display: block;
     }
-    
+
     .search-button {
         display: block;
     }
-    
+
     .topmenu-outer,
     .small-sidebar .topmenu-outer,
     .page-sidebar-fixed:not(.page-header-fixed) .topmenu-outer {
         margin: 0;
     }
-    
+
     .top-menu {
         display: none;
     }
-    
+
     .page-inner {
         -webkit-transition: all 0.1s ease-in-out;
         -moz-transition: all 0.1s ease-in-out;
         -o-transition: all 0.1s ease-in-out;
         transition: all 0.1s ease-in-out;
     }
-    
+
     .page-inner.sidebar-visible {
         -webkit-transform: translate3d(160px, 0, 0);
         transform: translate3d(160px, 0, 0);
     }
-    
+
     .small-sidebar .page-inner.sidebar-visible,
     .page-horizontal-bar .page-inner.sidebar-visible {
         -webkit-transform: translate3d(65px, 0, 0);
         transform: translate3d(65px, 0, 0);
     }
-    
+
     .page-sidebar-fixed.page-header-fixed .page-inner {
         padding: 60px 0 50px 0!important;
     }
-    
+
     .horizontal-bar {
         float: left;
         height: auto!important;
@@ -5018,64 +5018,64 @@ body:not(.small-sidebar):not(.page-horizontal-bar) .menu.accordion-menu,
         z-index: 1029;
         overflow: visible!important;
     }
-    
+
     .small-sidebar .horizontal-bar {
         height: auto!important;
     }
-    
+
     .horizontal-bar .menu li {
         float: none;
         display: block;
     }
-    
+
     .horizontal-bar .accordion-menu li > ul,
     .small-sidebar .horizontal-bar .accordion-menu li > ul {
         left: 65px!important;
         top: 0;
     }
-    
+
     .small-sidebar.page-horizontal-bar .accordion-menu > li > a,
     .small-sidebar.page-horizontal-bar:not(.page-sidebar-fixed) .accordion-menu > li > a {
         padding: 15px!important;
         text-align: center;
         width: 65px;
     }
-    
+
     .horizontal-bar .menu li a p {
         display: none;
     }
-    
+
     .small-sidebar.page-horizontal-bar .horizontal-bar .accordion-menu > li > a > .menu-icon {
         margin-right: 0!important;
         font-size: 16px;
         float: none!important;
     }
-    
+
     .horizontal-bar .accordion-menu > li > a {
         padding: 15px;
         text-align: center;
         width: 65px;
     }
-    
+
     .page-horizontal-bar .page-inner {
         padding: 60px 0 50px 0;
     }
-    
+
     .page-horizontal-bar.page-sidebar-fixed.page-header-fixed .page-inner {
         padding: 60px 0 50px 0;
     }
-    
+
     .small-sidebar.page-sidebar-fixed.page-header-fixed.page-horizontal-bar .page-inner {
         padding: 60px 0 50px 0;
     }
-    
+
     .small-sidebar.page-header-fixed.page-horizontal-bar:not(.page-sidebar-fixed) .page-inner {
         padding: 60px 0 50px 0;
     }
-    
+
     body:not(.page-header-fixed) .page-inner {
         padding: 0 0 50px 0;
-    }    
+    }
 }
 
 .overlay {

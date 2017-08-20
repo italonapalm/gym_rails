@@ -7,19 +7,21 @@
 
         <meta content="width=device-width, initial-scale=1" name="viewport"/>
         <meta charset="UTF-8">
-        <meta name="description" content="Admin Dashboard Template" />
-        <meta name="keywords" content="admin,dashboard" />
-        <meta name="author" content="Steelcoders" />
+        <meta name="description" content="Gym Dashboard Template" />
+        <meta name="keywords" content="gym,dashboard" />
+        <meta name="author" content="Ítalo Pires" />
 
-        <%= csrf_meta_tags %>
+
 
         <!-- Styles -->
         <%= stylesheet_link_tag    'application', media: 'all' %>
         <%= stylesheet_link_tag    'backoffice', media: 'all' %>
         <%= javascript_include_tag 'backoffice-head' %>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <%= csrf_meta_tags %>
     </head>
     <body class="page-header-fixed">
+
         <div class="overlay"></div>
         <%= render "layouts/shared_backoffice/chat" %>
         <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu-s2">
@@ -92,9 +94,12 @@
                         </ol>
                     </div>
                 </div>
+
                 <div id="main-wrapper">
                     <%= yield %>
+
                 </div><!-- Main Wrapper -->
+
                 <div class="page-footer">
                     <p class="no-s">2015 &copy; Modern by Steelcoders.</p>
                 </div>
@@ -106,6 +111,7 @@
 
         <!-- Javascripts -->
         <%= javascript_include_tag 'backoffice-body' %>
+        <%= javascript_include_tag 'application' %>
 
 
     </body>
