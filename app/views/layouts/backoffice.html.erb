@@ -113,6 +113,10 @@
         <%= javascript_include_tag 'backoffice-body' %>
         <%= javascript_include_tag 'application' %>
 
+        <script>
+            <%= yield :js %>
+        </script>
+
 
     </body>
 </html>

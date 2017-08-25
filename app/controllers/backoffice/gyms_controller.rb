@@ -16,6 +16,9 @@ class Backoffice::GymsController < BackofficeController
   end
 
   def edit
+    respond_to do |format|
+      format.js { @gym }
+    end
   end
 
   def create
@@ -25,10 +28,10 @@ class Backoffice::GymsController < BackofficeController
     respond_to do |format|
       if @gym.save
         format.html { redirect_to backoffice_gyms_path, notice: "A academia #{@gym.name} foi salva com sucesso" }
-        format.js
+        format.js { @gyms = Gym.all }
       else
         format.html { render :new }
-        format.js
+        format.js { render :show }
       end
     end
 
@@ -48,7 +51,7 @@ class Backoffice::GymsController < BackofficeController
 
   private
     def set_gym
-      @gym = Article.find(params[:id])
+      @gym = Gym.find(params[:id])
     end
 
     def gym_params

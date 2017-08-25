@@ -1,4 +1,7 @@
-//= require backoffice/body/jquery/jquery-2.1.3.min.js
+// require backoffice/body/jquery/jquery-2.1.3.min.js
+// require rails-ujs
+//= require jquery2
+//= require jquery_ujs
 //= require backoffice/body/jquery-ui/jquery-ui.min.js
 //= require backoffice/body/pace-master/pace.min.js
 //= require backoffice/body/jquery-blockui/jquery.blockui.js

@@ -1,0 +1,13 @@
+<% @gyms.each do |gym| %>
+  <tr>
+    <th scope="row"><%= gym.id %></th>
+    <td><%= gym.name %></td>
+    <td>
+      <%= link_to edit_backoffice_gym_path(gym), { class: 'btn btn-info btn-xs', 'data-toggle': "modal", 'data-target': ".bs-example-modal-lg", remote: true } do %>
+        Editar
+      <% end %>
+
+    <button class="btn btn-danger btn-xs">Excluir</button></td>
+  </tr>
+
+<% end %>
