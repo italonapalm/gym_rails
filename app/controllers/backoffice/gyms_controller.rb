@@ -12,6 +12,9 @@ class Backoffice::GymsController < BackofficeController
 
   def new
     @gym = Gym.new
+    respond_to do |format|
+      format.js { @gym }
+    end
 
   end
 
@@ -21,6 +24,18 @@ class Backoffice::GymsController < BackofficeController
     end
   end
 
+  def update
+
+    if @gym.update_attributes(gym_params)
+      respond_to do |format|
+        format.js { @gym }
+      end
+    else
+    end
+
+
+  end
+
   def create
     @gym = Gym.new(gym_params)
 
@@ -28,7 +43,7 @@ class Backoffice::GymsController < BackofficeController
     respond_to do |format|
       if @gym.save
         format.html { redirect_to backoffice_gyms_path, notice: "A academia #{@gym.name} foi salva com sucesso" }
-        format.js { @gyms = Gym.all }
+        format.js { @gym }
       else
         format.html { render :new }
         format.js { render :show }
@@ -55,6 +70,6 @@ class Backoffice::GymsController < BackofficeController
     end
 
     def gym_params
-      params.require(:gym).permit(:name)
+      params.require(:gym).permit(:id, :name)
     end
 end

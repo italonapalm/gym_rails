@@ -8,11 +8,27 @@
       <div class="panel-body">
         <div class="row">
           <div class="col-md-12">
-            <%= link_to '#', { class: 'btn btn-success', 'data-toggle': "modal", 'data-target': ".bs-example-modal-lg" } do %>
-              New Gym Using Ajax
+            <%= link_to new_backoffice_gym_path, { class: 'btn btn-success btn-addon m-b-sm btn-sm', 'data-toggle': "modal", 'data-target': ".bs-example-modal-lg", remote: true } do %>
+              <i class="fa fa-plus"></i>New Gym
+
             <% end %>
 
-            <%= render partial: 'backoffice/gyms/shared/form_modal' %>
+
+            <div id="modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                          <h4 class="modal-title" id="myLargeModalLabel">Academia</h4>
+                      </div>
+                      <div id="form_modal" class="modal-body">
+
+                        <%= render partial: 'backoffice/gyms/shared/form_modal' %>
+                      </div>
+                  </div>
+              </div>
+            </div>
+
 
           </div>
           <div class="col-md-12">
@@ -22,11 +38,15 @@
                   <tr>
                     <th>Id</th>
                     <th>Name</th>
-                    <th>Actions</th>
+                    <th class="text-right">Actions</th>
                   </tr>
                 </thead>
                 <tbody id="gyms-table">
-                  <%= render partial: 'backoffice/gyms/shared/gym_table' %>
+                  <% @gyms.each do |gym| %>
+                    <tr id="gym-row-<%= gym.id %>">
+                      <%= render partial: 'backoffice/gyms/shared/gym_row', locals: {gym: gym} %>
+                    </tr>
+                  <% end %>
 
                 </tbody>
               </table>
