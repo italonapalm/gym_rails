@@ -5,7 +5,7 @@ class Backoffice::GymsController < BackofficeController
 
   def index
     @gym = Gym.new
-    @gyms = Gym.all
+    @gyms = Gym.descending_order(params[:page])
   end
 
   def show
