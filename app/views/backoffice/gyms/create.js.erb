@@ -1,1 +1,7 @@
 $('table tbody').append("<tr id='gym-row-<%= @gym.id %>'><%= j render :partial => 'backoffice/gyms/shared/gym_row', locals: {gym: @gym} %></tr>");
+$('#gym_name').val('').focus();
+<% if notice.present? %>
+  toastr["success"]("<%= notice %>")
+<% else %>
+  toastr["error"]("<%= alert %>")
+<% end %>

@@ -1,10 +1,11 @@
 class Backoffice::GymsController < BackofficeController
   before_action :set_gym, only: [:show, :edit, :update, :destroy]
 
+  #respond_to :js
+
   def index
     @gym = Gym.new
     @gyms = Gym.all
-
   end
 
   def show
@@ -15,7 +16,6 @@ class Backoffice::GymsController < BackofficeController
     respond_to do |format|
       format.js { @gym }
     end
-
   end
 
   def edit
@@ -25,32 +25,29 @@ class Backoffice::GymsController < BackofficeController
   end
 
   def update
-
-    if @gym.update_attributes(gym_params)
-      respond_to do |format|
-        format.js { @gym }
+    respond_to do |format|
+      if @gym.update_attributes(gym_params)
+        flash[:notice] = I18n.t('messages.updated_with', item: @gym.name)
+        format.js
+      else
+        flash[:alert] = I18n.t('messages.updated_errors_with', item: @gym.name)
+        format.js
       end
-    else
     end
-
-
   end
 
   def create
     @gym = Gym.new(gym_params)
 
-
     respond_to do |format|
       if @gym.save
-        format.html { redirect_to backoffice_gyms_path, notice: "A academia #{@gym.name} foi salva com sucesso" }
-        format.js { @gym }
+        flash[:notice] = I18n.t('messages.created_with', item: @gym.name)
+        format.js
       else
-        format.html { render :new }
-        format.js { render :show }
+        flash[:alert] = I18n.t('messages.created_errors_with', item: @gym.name)
+        format.js
       end
     end
-
-
   end
 
   def destroy
@@ -61,7 +58,6 @@ class Backoffice::GymsController < BackofficeController
     else
       render :index
     end
-
   end
 
   private

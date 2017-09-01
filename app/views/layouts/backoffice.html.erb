@@ -84,24 +84,9 @@
             <%= render "layouts/shared_backoffice/navigation" %>
 
             <div class="page-inner">
-                <div class="page-title">
-                    <h3>Blank Page</h3>
-                    <div class="page-breadcrumb">
-                        <ol class="breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Layouts</a></li>
-                            <li class="active">Blank Page</li>
-                        </ol>
-                    </div>
-                </div>
-
-                <div id="main-wrapper">
-                    <%= yield %>
-
-                </div><!-- Main Wrapper -->
-
+                <%= yield %>
                 <div class="page-footer">
-                    <p class="no-s">2015 &copy; Modern by Steelcoders.</p>
+                    <p class="no-s"><%= Date.today.year %> &copy; <%= t('app.name') %>.</p>
                 </div>
             </div><!-- Page Inner -->
         </main><!-- Page Content -->

@@ -15,6 +15,7 @@
 *= require backoffice/switchery/switchery.min.css
 *= require backoffice/3d-bold-navigation/style.css
 *= require backoffice/slidepushmenus/component.css
+*= require backoffice/toast/toastr.min.css
 *= require backoffice/summernote-master/summernote.css
 *= require backoffice/bootstrap-colorpicker/colorpicker.css
 *= require backoffice/bootstrap-datepicker/datepicker3.css

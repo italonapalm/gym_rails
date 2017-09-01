@@ -1,0 +1,5 @@
+'pt-BR':
+  labels:
+    register: Cadastro de %{model}
+    table: Tabela de %{model}
+    action: Ações
