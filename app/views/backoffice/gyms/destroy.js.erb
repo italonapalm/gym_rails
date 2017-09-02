@@ -1,0 +1,8 @@
+console.log('adsfasdf');
+$("#gym-row-<%= @gym.id %>").remove();
+
+<% if notice.present? %>
+  toastr["success"]("<%= notice %>");
+<% else %>
+  toastr["error"]("<%= alert %>");
+<% end %>

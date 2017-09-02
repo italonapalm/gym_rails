@@ -51,12 +51,14 @@ class Backoffice::GymsController < BackofficeController
   end
 
   def destroy
-    @gym.destroy
-
-    unless @gym.errors.any?
-      redirect_to backoffice_gyms_path, notice: "A academia #{@gym.name} foi deletada com sucesso"
-    else
-      render :index
+    respond_to do |format|
+      if @gym.delete
+        flash[:notice] = "removido com sucesso"
+        format.js
+      else
+        flash[:alert] = "problema ao remover"
+        format.js
+      end
     end
   end
 
