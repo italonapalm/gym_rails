@@ -1,0 +1,13 @@
+<% if !(Gym.exists? (@gym.id)) %>
+  $("#gym-row-<%= @gym.id %>").remove();
+
+  <% if notice.present? %>
+    var modal = $('#confirm_delete_modal').modal('hide');
+    toastr["success"]("<%= notice %>");
+  <% else %>
+    var modal = $('#confirm_delete_modal').modal('hide');
+    toastr["error"]("<%= alert %>");
+  <% end %>
+<% else %>
+  alert('não foi possível remover');
+<% end %>

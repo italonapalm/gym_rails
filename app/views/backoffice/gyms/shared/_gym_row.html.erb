@@ -6,7 +6,10 @@
       <i class="fa fa-edit"></i><%= I18n.t('buttons.edit') %>
     <% end %>
 
-    <button class="btn btn-danger btn-xs btn-addon btn-xs">
+    <%= link_to '#', class: 'btn btn-danger btn-xs btn-addon call-confirm-delete', :data => { :id => gym.id }  do %>
       <i class="fa fa-trash"></i><%= I18n.t('buttons.destroy') %>
-    </button></td>
+    <% end %>
+
+  </div>
+</td>
 </div>

@@ -49,12 +49,14 @@ class Backoffice::GymsController < BackofficeController
   end
 
   def destroy
-    @gym.destroy
-
-    unless @gym.errors.any?
-      redirect_to backoffice_gyms_path, notice: "A academia #{@gym.name} foi deletada com sucesso"
-    else
-      render :index
+    respond_to do |format|
+      if @gym.delete
+        flash[:notice] = I18n.t('messages.destroyed_with', item: @gym.name)
+        format.js
+      else
+        flash[:alert] = I18n.t('messages.destroyed_errors_with', item: @gym.name)
+        format.js
+      end
     end
   end
 
