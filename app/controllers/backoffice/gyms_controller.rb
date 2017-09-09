@@ -1,8 +1,6 @@
 class Backoffice::GymsController < BackofficeController
   before_action :set_gym, only: [:show, :edit, :update, :destroy]
 
-  #respond_to :js
-
   def index
     @gym = Gym.new
     @gyms = Gym.all
@@ -14,13 +12,13 @@ class Backoffice::GymsController < BackofficeController
   def new
     @gym = Gym.new
     respond_to do |format|
-      format.js { @gym }
+      format.js
     end
   end
 
   def edit
     respond_to do |format|
-      format.js { @gym }
+      format.js
     end
   end
 
