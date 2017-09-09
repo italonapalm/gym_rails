@@ -53,10 +53,10 @@ class Backoffice::GymsController < BackofficeController
   def destroy
     respond_to do |format|
       if @gym.delete
-        flash[:notice] = "removido com sucesso"
+        flash[:notice] = I18n.t('messages.destroyed_with', item: @gym.name)
         format.js
       else
-        flash[:alert] = "problema ao remover"
+        flash[:alert] = I18n.t('messages.destroyed_errors_with', item: @gym.name)
         format.js
       end
     end

@@ -17,15 +17,11 @@
             <h4 class="panel-title"><%= t('messages.listing', model: @gyms.model_name.human(count: 2)) %></h4>
             <%= link_to new_backoffice_gym_path, { class: 'pull-right btn btn-success btn-addon m-b-sm btn-sm', 'data-toggle': "modal", 'data-target': ".bs-example-modal-lg", remote: true } do %>
                 <i class="fa fa-plus"></i><%= I18n.t('buttons.new') %>
-              <% end %>
+            <% end %>
         </div>
         <div class="panel-body">
           <div class="row">
             <div class="col-md-12">
-
-
-
-
               <div id="modal" class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
@@ -33,11 +29,31 @@
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myLargeModalLabel"><%= Gym.model_name.human %></h4>
                         </div>
-                        <div id="form_modal" class="modal-body">
+                        <div id="form_modal">
                           <%= render partial: 'backoffice/gyms/shared/form_modal' %>
                         </div>
                     </div>
                 </div>
+              </div>
+
+              <div class="modal fade" id="confirm_delete_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                              <h4 class="modal-title" id="myModalLabel">Confirmação</h4>
+                          </div>
+                          <div class="modal-body">
+                            Tem certeza que deseja deletar o item?
+                          </div>
+                          <div class="modal-footer">
+
+                              <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                              <%= link_to 'Delete', "/backoffice/gyms/pony", method: :delete, :class => 'btn btn-danger confirm-delete-button', remote: true %>
+
+                          </div>
+                      </div>
+                  </div>
               </div>
 
 

@@ -9,6 +9,7 @@
     created_with: "%{item} foi criado com sucesso!"
     created_errors_with: "Ocorreu um problema ao salvar %{item}"
     updated_errors_with: "Ocorreu um problema ao atualizar %{item}"
+    destroyed_errors_with: "Ocorreu um problema ao excluir %{item}"
     updated: Item atualizado com sucesso!
     updated_with: "%{item} foi atualizado com sucesso!"
     destroyed: Item excluído com sucesso!

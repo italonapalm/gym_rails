@@ -5,10 +5,10 @@
     <%= link_to edit_backoffice_gym_path(gym), { class: 'btn btn-info btn-addon btn-xs', 'data-toggle': "modal", 'data-target': ".bs-example-modal-lg", remote: true } do %>
       <i class="fa fa-edit"></i><%= I18n.t('buttons.edit') %>
     <% end %>
-    <%= link_to backoffice_gym_path(gym), method: :delete, class: 'btn btn-danger btn-xs btn-addon btn-xs', data: { confirm: 'Deseja remover este item?', remote: true } do %>
+
+    <%= link_to '#', class: 'btn btn-danger btn-xs btn-addon call-confirm-delete', :data => { :id => gym.id }  do %>
       <i class="fa fa-trash"></i><%= I18n.t('buttons.destroy') %>
     <% end %>
-
 
   </div>
 </td>
