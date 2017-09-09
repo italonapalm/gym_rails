@@ -1,0 +1,5 @@
+
+$('tr#gym-row-<%= @gym.id %>').html("<%= j render :partial => 'backoffice/gyms/shared/gym_row', locals: {gym: @gym} %>");
+$('#modal').modal('toggle');
+
+toastr["success"]("<%= flash[:notice] %>")

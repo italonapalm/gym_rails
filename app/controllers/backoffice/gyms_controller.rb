@@ -4,7 +4,6 @@ class Backoffice::GymsController < BackofficeController
   def index
     @gym = Gym.new
     @gyms = Gym.all
-
   end
 
   def show
@@ -12,30 +11,41 @@ class Backoffice::GymsController < BackofficeController
 
   def new
     @gym = Gym.new
-
+    respond_to do |format|
+      format.js
+    end
   end
 
   def edit
     respond_to do |format|
-      format.js { @gym }
+      format.js
+    end
+  end
+
+  def update
+    respond_to do |format|
+      if @gym.update_attributes(gym_params)
+        flash[:notice] = I18n.t('messages.updated_with', item: @gym.name)
+        format.js
+      else
+        flash[:alert] = I18n.t('messages.updated_errors_with', item: @gym.name)
+        format.js
+      end
     end
   end
 
   def create
     @gym = Gym.new(gym_params)
 
-
     respond_to do |format|
       if @gym.save
-        format.html { redirect_to backoffice_gyms_path, notice: "A academia #{@gym.name} foi salva com sucesso" }
-        format.js { @gyms = Gym.all }
+        flash[:notice] = I18n.t('messages.created_with', item: @gym.name)
+        format.js
       else
-        format.html { render :new }
-        format.js { render :show }
+        flash[:alert] = I18n.t('messages.created_errors_with', item: @gym.name)
+        format.js
       end
     end
-
-
   end
 
   def destroy
@@ -46,7 +56,6 @@ class Backoffice::GymsController < BackofficeController
     else
       render :index
     end
-
   end
 
   private
@@ -55,6 +64,6 @@ class Backoffice::GymsController < BackofficeController
     end
 
     def gym_params
-      params.require(:gym).permit(:name)
+      params.require(:gym).permit(:id, :name)
     end
 end

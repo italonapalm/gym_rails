@@ -1,0 +1,12 @@
+'pt-BR':
+  activerecord:
+    models:
+      gym:
+        one: Academia
+        other: Academias
+    attributes:
+      gym:
+        id: Código
+        name: Nome
+        created_at: Criado em
+        updated_at: Atualizado em

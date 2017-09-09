@@ -13,8 +13,26 @@
 //= require backoffice/body/offcanvasmenueffects/main.js
 //= require backoffice/body/waves/waves.min.js
 //= require backoffice/body/3d-bold-navigation/main.js
+//= require backoffice/body/toast/toastr.min.js
 //= require backoffice/body/summernote-master/summernote.js
 //= require backoffice/body/bootstrap-datepicker/bootstrap-datepicker.js
 //= require backoffice/body/bootstrap-colorpicker/bootstrap-colorpicker.js
 //= require backoffice/body/modern.min.js
 //= require backoffice/body/pages/form-elements.js
+
+toastr.options = {
+  "closeButton": true,
+  "debug": false,
+  "newestOnTop": true,
+  "progressBar": true,
+  "positionClass": "toast-top-center",
+  "preventDuplicates": true,
+  "showDuration": "300",
+  "hideDuration": "1000",
+  "timeOut": "5000",
+  "extendedTimeOut": "1000",
+  "showEasing": "swing",
+  "hideEasing": "linear",
+  "showMethod": "fadeIn",
+  "hideMethod": "fadeOut"
+}
