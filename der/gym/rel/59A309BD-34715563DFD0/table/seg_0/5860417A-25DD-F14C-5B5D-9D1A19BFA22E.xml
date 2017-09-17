@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="5860417A-25DD-F14C-5B5D-9D1A19BFA22E" name="Profile">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:45:42 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<ordsAlias>table_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="966B53F4-2FCB-66F5-6E6E-0216F741656F">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:51:45 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="A81D3F0C-4D4F-6B27-05EA-CFC9DC22B7FD">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:52:26 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="6887E2A1-40A4-8E8D-717A-CC34A369E44D">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:52:39 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="91508B69-20D7-2252-A6DB-8FC437FD4679" name="Profile_PK">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:51:45 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="966B53F4-2FCB-66F5-6E6E-0216F741656F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,4 +1,4 @@
-<% if !(Gym.exists? (@gym.id)) %>
+<% if !(@gym.active?) %>
   $("#gym-row-<%= @gym.id %>").remove();
 
   <% if notice.present? %>

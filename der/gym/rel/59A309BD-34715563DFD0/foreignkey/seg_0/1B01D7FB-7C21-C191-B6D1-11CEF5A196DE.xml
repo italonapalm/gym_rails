@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1B01D7FB-7C21-C191-B6D1-11CEF5A196DE" containerWithKeyObject="227DB78B-6522-9EDF-9DC9-0B5EC7AC8BB3" localFKIndex="6E7468B0-6219-AF45-EE5B-F77BB26A522C" name="Cities_States_FK">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-11 01:09:33 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<referredTableLongName>States</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>E3FF2C91-EB79-9395-6522-3B27250183E4</referredTableID>
+<keyObject>69951D97-8F87-376A-24A5-FB488BB0028F</keyObject>
+<referredKeyID>69951D97-8F87-376A-24A5-FB488BB0028F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

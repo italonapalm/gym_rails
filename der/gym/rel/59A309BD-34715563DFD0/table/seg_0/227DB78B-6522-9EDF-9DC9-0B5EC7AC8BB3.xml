@@ -1,0 +1,69 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="227DB78B-6522-9EDF-9DC9-0B5EC7AC8BB3" name="City">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-11 01:07:14 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="AD87EFDE-61B0-578A-4F9A-92D49C5DC2FC">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-11 01:07:52 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="E0C74C72-573D-0195-0124-20AEEE8235E2">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-11 01:08:04 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="state_id" id="3DBDC29E-6204-5CC1-69EB-63E34A4EBB30">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-11 01:08:22 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1B01D7FB-7C21-C191-B6D1-11CEF5A196DE" referredColumn="473B04E1-AD80-9BD4-B618-CF0F2B3CA7E4"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9F0CA335-47C8-3B1F-3153-46D12A802B04" name="Cities_PK">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-11 01:07:54 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AD87EFDE-61B0-578A-4F9A-92D49C5DC2FC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="6E7468B0-6219-AF45-EE5B-F77BB26A522C" name="Cities_States_FK">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-11 01:09:33 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3DBDC29E-6204-5CC1-69EB-63E34A4EBB30"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
