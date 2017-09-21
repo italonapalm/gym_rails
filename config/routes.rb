@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   namespace :backoffice do
-    resources :gyms
+    resources :gyms do
+      collection do
+        get :autocomplete
+      end
+    end
 
   end
 
