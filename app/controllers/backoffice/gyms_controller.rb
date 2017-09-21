@@ -60,9 +60,9 @@ class Backoffice::GymsController < BackofficeController
 
   def destroy
     @gym = Gym.find(params[:id])
-    @gym.active = false
+    # @gym.active = false
     respond_to do |format|
-      if @gym.save
+      if @gym.deactivate
         flash[:notice] = I18n.t('messages.destroyed_with', item: @gym.name)
         format.js
       else

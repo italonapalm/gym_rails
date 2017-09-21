@@ -13,4 +13,8 @@ class Gym < ApplicationRecord
     where("name LIKE ? AND active = true", "#{query.to_s}").order(name: :asc).page(1).per(PER_PAGE_ITEMS)
   }
 
+  def deactivate
+    update(active: false)
+  end
+
 end
