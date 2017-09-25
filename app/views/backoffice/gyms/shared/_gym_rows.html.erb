@@ -1,0 +1,5 @@
+<% gyms.each do |gym| %>
+  <tr id="gym-row-<%= gym.id %>">
+    <%= render partial: 'backoffice/gyms/shared/gym_row', locals: {gym: gym} %>
+  </tr>
+<% end %>

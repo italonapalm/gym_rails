@@ -17,7 +17,9 @@
         <%= stylesheet_link_tag    'application', media: 'all' %>
         <%= stylesheet_link_tag    'backoffice', media: 'all' %>
         <%= javascript_include_tag 'backoffice-head' %>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+        <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' %>
+
+
         <%= csrf_meta_tags %>
     </head>
     <body class="page-header-fixed">
@@ -80,11 +82,13 @@
 
         <main class="page-content content-wrap">
             <%= render "layouts/shared_backoffice/top_menu" %>
-
             <%= render "layouts/shared_backoffice/navigation" %>
 
+
             <div class="page-inner">
+                <%= render "layouts/shared_backoffice/modals" %>
                 <%= yield %>
+
                 <div class="page-footer">
                     <p class="no-s"><%= Date.today.year %> &copy; <%= t('app.name') %>.</p>
                 </div>
@@ -97,11 +101,8 @@
         <!-- Javascripts -->
         <%= javascript_include_tag 'backoffice-body' %>
         <%= javascript_include_tag 'application' %>
+        <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js" %>
 
-        <script>
-            <%= yield :js %>
-        </script>
-
-
+        <%= yield :javascripts %>
     </body>
 </html>

@@ -1,5 +1,4 @@
 class Gym < ApplicationRecord
-
   # Constants
   PER_PAGE_ITEMS = 6
 
@@ -7,6 +6,15 @@ class Gym < ApplicationRecord
 
   # Scopes
   scope :descending_order, -> (page) {
-    order(created_at: :desc).page(page).per(PER_PAGE_ITEMS)
+    where(active: true).order(created_at: :desc).page(page).per(PER_PAGE_ITEMS)
   }
+
+  scope :search, -> (query) {
+    where("name LIKE ? AND active = true", "#{query.to_s}").order(name: :asc).page(1).per(PER_PAGE_ITEMS)
+  }
+
+  def deactivate
+    update(active: false)
+  end
+
 end

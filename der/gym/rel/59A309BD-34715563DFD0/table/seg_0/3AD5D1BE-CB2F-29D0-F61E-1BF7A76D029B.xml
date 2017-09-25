@@ -1,0 +1,81 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="3AD5D1BE-CB2F-29D0-F61E-1BF7A76D029B" name="Role">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:52:57 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="5F55BA90-0B0A-0A4C-B197-922D49DEE775">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:53:36 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="6E69A917-F9B9-21FB-2113-BD182DA694E1">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:53:52 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="description" id="5205BB52-50F2-1808-7F90-AFE8F5AF0E98">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:54:02 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="profile_id" id="4D21D543-EA44-8720-D459-BB2A495458A6">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:56:12 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="CA3770BB-CC55-2F44-67C3-C766BC2371D8" referredColumn="966B53F4-2FCB-66F5-6E6E-0216F741656F"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9D5B32C7-BD1A-E6D8-6160-F971B999FB36" name="Roles_PK">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:53:36 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5F55BA90-0B0A-0A4C-B197-922D49DEE775"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FD5A3584-6E31-0438-5FDD-8294A966B528" name="Roles_Profiles_FK">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:59:09 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4D21D543-EA44-8720-D459-BB2A495458A6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

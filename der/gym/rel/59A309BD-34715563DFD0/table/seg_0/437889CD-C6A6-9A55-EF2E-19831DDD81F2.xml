@@ -1,0 +1,47 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="437889CD-C6A6-9A55-EF2E-19831DDD81F2" name="Company">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-14 00:15:13 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<ordsAlias>table_10</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="CFC6B47D-C456-AD6A-6798-6849C20AF7ED">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-14 00:20:15 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="name" id="DE62864D-BF48-2A71-DE9E-E541A633640D">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-14 00:21:02 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B177EFBC-79AF-2D84-4D53-796DA2DD7C50" name="Company_PK">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-14 00:21:06 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CFC6B47D-C456-AD6A-6798-6849C20AF7ED"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

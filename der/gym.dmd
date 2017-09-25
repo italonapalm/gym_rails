@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="gym" id="5B79FBFD-A77B-22D7-613A-B88399B86CBD" version="3.5">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-10 19:35:35 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>5B79FBFD-A77B-22D7-613A-B88399B86CBD</designId>
+</OSDM_Design>
