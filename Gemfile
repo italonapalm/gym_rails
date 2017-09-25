@@ -33,6 +33,8 @@ gem 'kaminari'
 # Translations for the kaminari gem
 gem 'kaminari-i18n'
 gem 'bootstrap-kaminari-views'
+# A library for generating fake data such as names, addresses, and phone numbers.
+gem 'faker'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
@@ -51,6 +53,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'shoulda-matchers', git: 'https://github.com/thoughtbot/shoulda-matchers.git', branch: 'rails-5'
   gem 'selenium-webdriver'
+  gem 'rails-controller-testing'
 end
 
 group :development do
