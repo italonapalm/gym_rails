@@ -12,8 +12,6 @@ class Backoffice::GymsController < BackofficeController
         format.js
       end
     end
-
-
   end
 
   def show
