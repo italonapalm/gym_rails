@@ -10,10 +10,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917004011) do
+ActiveRecord::Schema.define(version: 20170925233450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "addresses", force: :cascade do |t|
+    t.string "cep"
+    t.string "neighborhood"
+    t.integer "number"
+    t.string "complement"
+    t.string "address"
+    t.string "reference"
+    t.bigint "city_id"
+    t.string "street"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_addresses_on_city_id"
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.string "name"
+    t.bigint "state_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state_id"], name: "index_cities_on_state_id"
+  end
 
   create_table "gyms", force: :cascade do |t|
     t.string "name"
@@ -22,4 +44,26 @@ ActiveRecord::Schema.define(version: 20170917004011) do
     t.boolean "active", default: true
   end
 
+  create_table "states", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "full_name"
+    t.date "birthdate"
+    t.string "cpf"
+    t.string "rg"
+    t.bigint "address_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["address_id"], name: "index_students_on_address_id"
+  end
+
+  add_foreign_key "addresses", "cities"
+  add_foreign_key "cities", "states"
+  add_foreign_key "students", "addresses"
 end

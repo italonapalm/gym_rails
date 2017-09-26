@@ -4,7 +4,7 @@ class Backoffice::GymsController < BackofficeController
   def index
     @gym = Gym.new
     @gyms = Gym.descending_order(params[:page])
-
+puts params[:controller]
     if params[:query].present?
       @gyms = Gym.search(params[:query])
 
