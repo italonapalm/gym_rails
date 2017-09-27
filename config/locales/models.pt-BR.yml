@@ -4,9 +4,32 @@
       gym:
         one: Academia
         other: Academias
+      student:
+        one: Aluno
+        other: Alunos
+      Address:
+        one: Endereço
+        other: Endereços
+      City:
+        one: Cidade
+        other: Cidades
+      State:
+        one: Estado
+        other: Estados
     attributes:
       gym:
         id: Código
         name: Nome
         created_at: Criado em
         updated_at: Atualizado em
+      student:
+        id: Código
+        first_name: Primeiro Nome
+        last_name: Último Nome
+        full_name: Nome Completo
+        birthdate: Data de Aniversário
+        cpf: CPF
+        rg: Identidade
+      Address:
+        id: Código
+
