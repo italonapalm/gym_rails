@@ -35,6 +35,8 @@ gem 'kaminari-i18n'
 gem 'bootstrap-kaminari-views'
 # A library for generating fake data such as names, addresses, and phone numbers.
 gem 'faker'
+gem 'devise'
+gem 'devise-i18n'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'

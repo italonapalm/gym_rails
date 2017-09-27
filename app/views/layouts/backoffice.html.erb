@@ -101,7 +101,9 @@
         <!-- Javascripts -->
         <%= javascript_include_tag 'backoffice-body' %>
         <%= javascript_include_tag 'application' %>
-        <%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.9.3/typeahead.min.js" %>
+            <% flash.each do |key, value| %>
+        <%= javascript_tag "toastr['success']('#{value}');" %>
+    <% end %>
 
         <%= yield :javascripts %>
     </body>

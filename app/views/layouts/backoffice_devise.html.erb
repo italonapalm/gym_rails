@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Backoffice - EscamboApp</title>
+
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta charset="UTF-8">
+    <meta name="description" content="Admin Dashboard Template" />
+    <meta name="keywords" content="admin,dashboard" />
+    <meta name="author" content="Steelcoders" />
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= stylesheet_link_tag    'backoffice', media: 'all' %>
+    <%= javascript_include_tag 'backoffice-head' %>
+    <%= stylesheet_link_tag 'http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' %>
+    <%= csrf_meta_tags %>
+
+</head>
+
+<body class="page-login">
+    <%= yield %>
+
+    <!-- Javascripts -->
+    <%= javascript_include_tag 'backoffice-login-body' %>
+    <%= javascript_include_tag 'application' %>
+    <% flash.each do |key, value| %>
+
+      <%= javascript_tag "toastr['error']('#{value}');" %>
+    <% end %>
+</body>
+
+</html>
