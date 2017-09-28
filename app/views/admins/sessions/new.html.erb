@@ -1,0 +1,29 @@
+<main class="page-content">
+    <div class="page-inner">
+        <div id="main-wrapper">
+            <div class="row">
+                <div class="col-md-3 center">
+                    <div class="login-box">
+                        <%= link_to "GymNow", new_admin_session_path, class: "logo-name text-lg text-center" %>
+                        <p class="text-center m-t-md">Please login into your account.</p>
+                        <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "m-t-md" }) do |f| %>
+
+                            <div class="form-group">
+                                <%= f.input :email, input_html: { class: 'form-control' }, required: false, autofocus: true, placeholder: "Email", label: false %>
+                            </div>
+                            <div class="form-group">
+                                <%= f.input :password, input_html: { class: 'form-control' }, required: false, placeholder: "Password", label: false %>
+                            </div>
+                            <%= f.button :submit, "Log in", class: "btn btn-success btn-block" %>
+
+                            <%= render "admins/shared/links" %>
+                        <% end %>
+                        <p class="text-center m-t-xs text-sm"><%= Date.today.year %> &copy; <%= t('app.name') %> by Ítalo Pires.</p>
+                    </div>
+                </div>
+            </div><!-- Row -->
+        </div><!-- Main Wrapper -->
+    </div><!-- Page Inner -->
+</main><!-- Page Content -->
+
+
