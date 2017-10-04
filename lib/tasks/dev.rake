@@ -9,6 +9,7 @@ namespace :dev do
     puts %x(rake db:seed)
     puts %x(rake dev:generate_states)
     puts %x(rake dev:generate_cities)
+    puts %x(rake dev:generate_students)
   end
 
   desc "Create States"
@@ -44,7 +45,8 @@ namespace :dev do
         full_name: Faker::Name.name,
         birthdate: Faker::Date.birthday(14, 65),
         cpf: Faker::CPF.numeric,
-        rg: Faker::Number.number(10)
+        rg: Faker::Number.number(10),
+        active: true
       )
       student.build_address
       student.address.cep = Faker::Address.zip

@@ -1,0 +1,4 @@
+$('tr#student-row-<%= @student.id %>').html("<%= j render partial: 'backoffice/students/shared/student_row', locals: {student: @student} %>");
+$('#modal').modal('hide');
+
+toastr["success"]("<%= flash[:notice] %>");

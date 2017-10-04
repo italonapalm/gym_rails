@@ -27,7 +27,11 @@
                                         <%= Gym.model_name.human %>
                                     <% end %>
                                 </li>
-                                <li><a href="layout-boxed.html">Boxed Page</a></li>
+                                <li class="<%= 'active' if params[:controller] == 'backoffice/students' %>">
+                                    <%= link_to backoffice_students_path do %>
+                                        <%= Student.model_name.human %>
+                                    <% end %>
+                                </li>
                                 <li><a href="layout-horizontal-menu.html">Horizontal Menu</a></li>
                                 <li><a href="layout-horizontal-menu-boxed.html">Boxed &amp; Horizontal Menu</a></li>
                                 <li><a href="layout-horizontal-menu-minimal.html">Horizontal Menu Minimal</a></li>

@@ -16,6 +16,7 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 Rails.application.config.assets.precompile += %w( backoffice.css )
 Rails.application.config.assets.precompile += %w( backoffice-body.js
                                                   backoffice-head.js
+                                                  backoffice-login-body.js
                                                   backoffice/gyms.js
-                                                  backoffice-login-body.js )
+                                                  backoffice/students.js )
 Rails.application.config.assets.precompile += %w( *.eot *.svg *.ttf *.woff *.woff2 *.png )
