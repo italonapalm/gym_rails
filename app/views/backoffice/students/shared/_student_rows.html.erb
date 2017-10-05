@@ -1,0 +1,5 @@
+<% students.each do |student| %>
+  <tr id="student-row-<%= student.id %>">
+    <%= render partial: 'backoffice/students/shared/student_row', locals: {student: student} %>
+  </tr>
+<% end %>

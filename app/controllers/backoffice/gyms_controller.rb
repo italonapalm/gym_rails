@@ -4,7 +4,7 @@ class Backoffice::GymsController < BackofficeController
   def index
     @gym = Gym.new
     @gyms = Gym.descending_order(params[:page])
-puts params[:controller]
+
     if params[:query].present?
       @gyms = Gym.search(params[:query])
 
@@ -57,8 +57,6 @@ puts params[:controller]
   end
 
   def destroy
-    @gym = Gym.find(params[:id])
-    # @gym.active = false
     respond_to do |format|
       if @gym.deactivate
         flash[:notice] = I18n.t('messages.destroyed_with', item: @gym.name)

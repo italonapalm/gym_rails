@@ -1,0 +1,1 @@
+$('table tbody').html('').append("<tr id='student-row-<%= @student.id %>'><%= j render :partial => 'backoffice/students/shared/student_rows', locals: {students: @students} %></tr>");

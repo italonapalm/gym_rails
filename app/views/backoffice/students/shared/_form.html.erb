@@ -1,0 +1,44 @@
+<%= simple_form_for [:backoffice, @student], remote: true, html: { multipart: true, novalidate: false } do |f| %>
+    <div class="modal-body">
+      <div class="form-group">
+        <%= f.input :full_name, input_html: { class: 'form-control' }, required: true, autofocus: true %>
+      </div>
+      <%= f.simple_fields_for :address do |address| %>
+        <div class="form-group">
+          <%= address.input :address, input_html: { class: 'form-control' }, required: true %>
+        </div>
+        <div class="form-group">
+          <div class="row">
+            <div class="col-md-8">
+              <%= address.input :neighborhood, input_html: { class: 'form-control' }, required: true %>
+            </div>
+            <div class="col-md-4">
+              <%= address.input :cep, input_html: { class: 'form-control' } %>
+            </div>
+          </div>
+        </div>
+        <%= simple_fields_for :other do |o| %>
+        <div class="form-group">
+          <%= o.input :state_id, collection: @states, label_method: :name, value_method: :id, prompt: "Select your State", input_html: { class: 'form-control' }, required: true %>
+
+
+        </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= address.association :city, collection: @cities, label_method: :name, value_method: :id, id: :city_id, input_html: { class: "form-control m-b-sm" }, prompt: "Escolha uma cidade" %>
+        </div>
+
+
+
+
+
+      <% end %>
+    </div>
+    <div class="modal-footer">
+      <%= button_tag type: :reset, class: "btn btn-default", "data-dismiss": "modal" do %>
+        <%= I18n.t 'buttons.close' %>
+      <% end %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    </div>
+<% end %>
