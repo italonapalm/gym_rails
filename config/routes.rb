@@ -4,10 +4,7 @@ Rails.application.routes.draw do
     resources :gyms
     resources :students
 
-    resources :states do
-      resources :cities
-    end
-
+    get '/states/:state_id/cities', to: 'cities#cities_of_state'
   end
 
   devise_for :admins

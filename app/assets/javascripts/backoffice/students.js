@@ -1,18 +1,16 @@
 $(document).ready(function() {
+  $(document).ajaxStart(function() { Pace.restart(); });
   $(document).on('change', '#other_state_id', {}, function(e) {
     var state_id = $(this).val();
-
     $.ajax({
       type: 'GET',
       url: '/backoffice/states/'+state_id+'/cities',
       dataType: 'json',
       success:function(data) {
         $('#student_address_attributes_city_id').html('');
-        //$('#student_address_attributes_city_id').append('<option>Selecione uma cidade</option>');
         $.each(data, function() {
           $('#student_address_attributes_city_id').append("<option value='"+this.id+"'>"+this.name+"</option>");
         });
-        console.log(data);
       }
     });
   });
