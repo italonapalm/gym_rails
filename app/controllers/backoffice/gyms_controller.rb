@@ -33,10 +33,10 @@ class Backoffice::GymsController < BackofficeController
   def update
     respond_to do |format|
       if @gym.update_attributes(gym_params)
-        flash[:notice] = I18n.t('messages.updated_with', item: @gym.name)
+        flash.now[:notice] = I18n.t('messages.updated_with', item: @gym.name)
         format.js
       else
-        flash[:alert] = I18n.t('messages.updated_errors_with', item: @gym.name)
+        flash.now[:alert] = I18n.t('messages.updated_errors_with', item: @gym.name)
         format.js
       end
     end
@@ -47,10 +47,10 @@ class Backoffice::GymsController < BackofficeController
 
     respond_to do |format|
       if @gym.save
-        flash[:notice] = I18n.t('messages.created_with', item: @gym.name)
+        flash.now[:notice] = I18n.t('messages.created_with', item: @gym.name)
         format.js
       else
-        flash[:alert] = I18n.t('messages.created_errors_with', item: @gym.name)
+        flash.now[:alert] = I18n.t('messages.created_errors_with', item: @gym.model_name.human)
         format.js
       end
     end
@@ -59,10 +59,10 @@ class Backoffice::GymsController < BackofficeController
   def destroy
     respond_to do |format|
       if @gym.deactivate
-        flash[:notice] = I18n.t('messages.destroyed_with', item: @gym.name)
+        flash.now[:notice] = I18n.t('messages.destroyed_with', item: @gym.name)
         format.js
       else
-        flash[:alert] = I18n.t('messages.destroyed_errors_with', item: @gym.name)
+        flash.now[:alert] = I18n.t('messages.destroyed_errors_with', item: @gym.name)
         format.js
       end
     end

@@ -30,6 +30,27 @@
         birthdate: Data de Aniversário
         cpf: CPF
         rg: Identidade
-      Address:
+        sex: Sexo
+      address:
         id: Código
+        neighborhood: Bairro
+        number: Número
+        complement: Complemento
+        address: Endereço
+        reference: Referência
+      city:
+        id: Código
+        name: Cidade
+      state:
+        id: Código
+        name: Estado
+    errors:
+      models:
+        gym:
+          attributes:
+            name:
+              blank: não pode ficar em branco
+              too_short: deve ter no mínimo %{count} caracteres
+              too_long: deve ter no máximo %{count} caracteres
+              taken: já existe
 

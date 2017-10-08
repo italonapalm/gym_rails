@@ -37,7 +37,7 @@ gem 'bootstrap-kaminari-views'
 gem 'faker'
 gem 'devise'
 gem 'devise-i18n'
-
+gem 'cocoon'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

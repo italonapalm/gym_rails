@@ -7,9 +7,21 @@ namespace :dev do
     puts "CRIANDO BD... #{%x(rake db:create)}"
     puts %x(rake db:migrate)
     puts %x(rake db:seed)
+    puts %x(rake dev:generate_gyms)
     puts %x(rake dev:generate_states)
     puts %x(rake dev:generate_cities)
     puts %x(rake dev:generate_students)
+  end
+
+  desc "Create Gyms"
+  task generate_gyms: :environment do
+    puts "Registering GYMS"
+    10.times do
+      Gym.create!(
+        name: Faker::Company.name
+      )
+    end
+    puts "GYMS successfully registered!"
   end
 
   desc "Create States"
