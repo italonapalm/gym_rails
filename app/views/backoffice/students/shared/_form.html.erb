@@ -39,7 +39,7 @@
         </div>
         <%= simple_fields_for :other do |o| %>
         <div class="form-group">
-          <%= o.input :state_id, collection: @states, label_method: :name, value_method: :id, prompt: "Select your State", input_html: { class: 'form-control' }, required: true %>
+          <%= o.input :state, collection: @states, label_method: :name, value_method: :id, prompt: "Select your State", input_html: { class: 'form-control' }, required: true %>
         </div>
         <% end %>
 

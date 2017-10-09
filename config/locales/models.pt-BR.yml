@@ -1,4 +1,15 @@
 'pt-BR':
+  helpers:
+    label:
+      student[address_attributes]:
+        city_id: Cidade
+        city: Cidade
+      other[state]:
+        state_id: Estado
+        state: Estado
+      other:
+        state_id: Estado
+        state: Estado
   activerecord:
     models:
       gym:
@@ -38,12 +49,16 @@
         complement: Complemento
         address: Endereço
         reference: Referência
+        city: Cidade
       city:
         id: Código
         name: Cidade
+        state: Estado
       state:
         id: Código
         name: Estado
+      other:
+        state: Estado
     errors:
       models:
         gym:
