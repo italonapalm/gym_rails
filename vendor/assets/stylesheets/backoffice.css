@@ -4,7 +4,6 @@
 
 /*
 *= require_self
-* require_tree ./backoffice
 *= require backoffice/pace-master/themes/blue/pace-theme-flash.css
 *= require backoffice/uniform/uniform.default.css
 *= require backoffice/bootstrap/bootstrap.css
@@ -19,11 +18,8 @@
 *= require backoffice/summernote-master/summernote.css
 *= require backoffice/bootstrap-colorpicker/colorpicker.css
 *= require backoffice/bootstrap-datepicker/datepicker3.css
-
 *= require backoffice/modern.css
 *= require backoffice/themes/white.css
 *= require backoffice/custom.css
 
 */
-
-

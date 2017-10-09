@@ -1,5 +1,11 @@
-$('table tbody').append("<tr id='student-row-<%= @student.id %>'><%= j render :partial => 'backoffice/students/shared/student_row', locals: {student: @student} %></tr>");
-// $('#gym_name').val('').focus();
+<% unless @student.errors.any? %>
+  $('div.errors').html('');
+  $('table tbody').append("<tr id='student-row-<%= @student.id %>'><%= j render :partial => 'backoffice/students/shared/student_row', locals: {student: @student} %></tr>");
+  $('#student_name').val('').focus();
+<% else %>
+  $('div.errors').html('').append("<%= j render :partial => 'backoffice/students/shared/student_errors', locals: {student: @student} %>");
+<% end %>
+
 <% if notice.present? %>
   toastr["success"]("<%= notice %>");
 <% else %>

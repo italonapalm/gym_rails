@@ -66,6 +66,7 @@ GEM
     childprocess (0.7.1)
       ffi (~> 1.0, >= 1.0.11)
     clipboard (1.1.1)
+    cocoon (1.2.10)
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -257,6 +258,7 @@ DEPENDENCIES
   bootstrap-kaminari-views
   byebug
   capybara (~> 2.13)
+  cocoon
   coffee-rails (~> 4.2)
   cpf_faker
   devise

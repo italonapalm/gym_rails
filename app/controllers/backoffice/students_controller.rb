@@ -6,6 +6,7 @@ class Backoffice::StudentsController < BackofficeController
     @student.build_address
     @states = State.all
     @cities = []
+    @gyms = Gym.all
     @students = Student.actives(params[:page])
 
     if params[:query].present?
@@ -22,6 +23,7 @@ class Backoffice::StudentsController < BackofficeController
     @student.build_address
     @states = State.all
     @cities = []
+    @gyms = Gym.all
     respond_to do |format|
       format.js
     end
@@ -61,6 +63,7 @@ class Backoffice::StudentsController < BackofficeController
 
   def create
     @student = Student.new(student_params)
+    #@student.gym_students = @student.gym_students.each { |gs| gs.active = true }
 
     respond_to do |format|
       if @student.save
@@ -80,7 +83,8 @@ class Backoffice::StudentsController < BackofficeController
 
     def student_params
       params.require(:student).permit(:id, :first_name, :last_name, :full_name, :birthdate, :cpf,
-        :rg, :active, :email, :sex, address_attributes: [:cep, :neighborhood, :number, :complement, :address,
-          :reference, :city_id, :street])
+        :rg, :active, :email, :sex, gym_ids: [], address_attributes: [:id, :cep, :neighborhood, :number, :complement, :address,
+        :reference, :city_id, :street], gym_students_attributes: [:id, :gym_id, :student_id, :registration_date,
+        :active, :_destroy, gym_attributes: [:id, :name]])
     end
 end

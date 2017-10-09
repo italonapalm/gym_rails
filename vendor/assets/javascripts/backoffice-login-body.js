@@ -1,12 +1,12 @@
 //= require jquery2
 //= require jquery_ujs
 //= require backoffice/body/jquery-ui/jquery-ui.min.js
-//= require backoffice/body/pace-master/pace.min.js
+//= require backoffice/body/pace-master/pace.js
 //= require backoffice/body/jquery-blockui/jquery.blockui.js
 //= require backoffice/body/bootstrap/bootstrap.js
 //= require backoffice/body/jquery-slimscroll/jquery.slimscroll.min.js
 //= require backoffice/body/switchery/switchery.min.js
-//= require backoffice/body/uniform/jquery.uniform.min.js
+//= require backoffice/body/uniform/jquery.uniform.js
 //= require backoffice/body/offcanvasmenueffects/classie.js
 //= require backoffice/body/offcanvasmenueffects/main.js
 //= require backoffice/body/waves/waves.min.js

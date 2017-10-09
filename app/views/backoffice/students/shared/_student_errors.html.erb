@@ -1,0 +1,9 @@
+<div class="alert alert-danger alert-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+    <h4><%= t 'messages.created_errors_with', item: student.model_name.human %></h4>
+    <ul>
+        <% student.errors.full_messages.each do |message| %>
+            <li><%= message.html_safe %></li>
+        <% end %>
+    </ul>
+</div>

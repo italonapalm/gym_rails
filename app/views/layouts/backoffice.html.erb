@@ -101,9 +101,9 @@
         <!-- Javascripts -->
         <%= javascript_include_tag 'backoffice-body' %>
         <%= javascript_include_tag 'application' %>
-            <% flash.each do |key, value| %>
-        <%= javascript_tag "toastr['success']('#{value}');" %>
-    <% end %>
+        <% flash.each do |key, value| %>
+            <%= javascript_tag "toastr['success']('#{value}');" %>
+        <% end %>
 
         <%= yield :javascripts %>
     </body>
