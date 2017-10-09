@@ -1,6 +1,6 @@
 $(document).ready(function() {
   $(document).ajaxStart(function() { Pace.restart(); });
-  $(document).on('change', '#other_state_id', {}, function(e) {
+  $(document).on('change', '#other_state', {}, function(e) {
     var state_id = $(this).val();
     $.ajax({
       type: 'GET',
