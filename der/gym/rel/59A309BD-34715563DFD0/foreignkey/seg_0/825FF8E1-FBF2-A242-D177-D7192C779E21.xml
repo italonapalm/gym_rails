@@ -1,9 +1,9 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="CA3770BB-CC55-2F44-67C3-C766BC2371D8" containerWithKeyObject="3AD5D1BE-CB2F-29D0-F61E-1BF7A76D029B" localFKIndex="FD5A3584-6E31-0438-5FDD-8294A966B528" name="Roles_Profiles_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="825FF8E1-FBF2-A242-D177-D7192C779E21" containerWithKeyObject="176F6E73-5E81-DB7F-5AB7-0B7C71DD3B34" localFKIndex="3E517486-7B1D-8130-D97F-C559E2F2DD2C" name="Profile_Role_Profile_FK">
 <createdBy>italonapalm</createdBy>
-<createdTime>2017-09-10 19:59:09 UTC</createdTime>
+<createdTime>2017-10-12 20:04:56 UTC</createdTime>
 <ownerDesignName>gym</ownerDesignName>
-<referredTableLongName>Profiles</referredTableLongName>
+<referredTableLongName>Profile</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>5860417A-25DD-F14C-5B5D-9D1A19BFA22E</referredTableID>
 <keyObject>91508B69-20D7-2252-A6DB-8FC437FD4679</keyObject>

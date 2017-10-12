@@ -1,0 +1,5 @@
+<% roles.each do |role| %>
+  <tr id="role-row-<%= role.id %>">
+    <%= render partial: 'backoffice/roles/shared/role_row', locals: {role: role} %>
+  </tr>
+<% end %>

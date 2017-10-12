@@ -1,0 +1,4 @@
+$('tr#role-row-<%= @role.id %>').html("<%= j render partial: 'backoffice/roles/shared/role_row', locals: {role: @role} %>");
+$('#modal').modal('hide');
+
+toastr["success"]("<%= flash[:notice] %>");

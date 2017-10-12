@@ -1,0 +1,13 @@
+<% unless @role.errors.any? %>
+  $('div.errors').html('');
+  $('table tbody').append("<tr id='role-row-<%= @role.id %>'><%= j render :partial => 'backoffice/roles/shared/role_row', locals: {role: @role} %></tr>");
+  $('#role_name').val('').focus();
+<% else %>
+  $('div.errors').html('').append("<%= j render :partial => 'backoffice/roles/shared/role_errors', locals: {role: @role} %>");
+<% end %>
+
+<% if notice.present? %>
+  toastr["success"]("<%= notice %>");
+<% else %>
+  toastr["error"]("<%= alert %>");
+<% end %>

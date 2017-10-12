@@ -18,5 +18,6 @@ Rails.application.config.assets.precompile += %w( backoffice-body.js
                                                   backoffice-head.js
                                                   backoffice-login-body.js
                                                   backoffice/gyms.js
-                                                  backoffice/students.js )
+                                                  backoffice/students.js
+                                                  backoffice/roles.js )
 Rails.application.config.assets.precompile += %w( *.eot *.svg *.ttf *.woff *.woff2 *.png )

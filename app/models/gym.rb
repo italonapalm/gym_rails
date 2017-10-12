@@ -1,4 +1,6 @@
 class Gym < ApplicationRecord
+  before_create :set_gym
+
   has_many :gym_students
   has_many :students, through: :gym_students
 
@@ -24,6 +26,10 @@ class Gym < ApplicationRecord
 
   def deactivate
     update(active: false)
+  end
+
+  def set_gym
+    self.active = true
   end
 
 end

@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1820A3E0-0E2D-CC87-B9C3-D2D8432C9096" name="Gym_Student">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="176F6E73-5E81-DB7F-5AB7-0B7C71DD3B34" name="Profile_Role">
 <createdBy>italonapalm</createdBy>
-<createdTime>2017-09-14 00:35:23 UTC</createdTime>
+<createdTime>2017-10-12 19:49:01 UTC</createdTime>
 <ownerDesignName>gym</ownerDesignName>
-<ordsAlias>table_19</ordsAlias>
+<ordsAlias>table_15</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="1EB3496C-534C-F783-D902-7698EE676E90">
+<Column name="id" id="29733DE3-7562-74BA-F630-6CBB4819D6F0">
 <createdBy>italonapalm</createdBy>
-<createdTime>2017-09-14 00:35:36 UTC</createdTime>
+<createdTime>2017-10-12 20:04:13 UTC</createdTime>
 <ownerDesignName>gym</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,9 +18,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="gym_id" id="4DCC0785-DD5E-00D9-149F-5754FB223BF8">
+<Column name="profile_id" id="33F8C761-E4A6-AD4D-9FE6-6A7911C264A5">
 <createdBy>italonapalm</createdBy>
-<createdTime>2017-09-14 00:35:56 UTC</createdTime>
+<createdTime>2017-10-12 20:04:26 UTC</createdTime>
 <ownerDesignName>gym</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -28,12 +28,12 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="4F2A675C-4EF3-4C2C-AECF-40BDA901243D" referredColumn="43366517-9365-8FE6-162F-A351A372F6BC"/>
+<colAssociation fkAssociation="825FF8E1-FBF2-A242-D177-D7192C779E21" referredColumn="966B53F4-2FCB-66F5-6E6E-0216F741656F"/>
 </associations>
 </Column>
-<Column name="student_id" id="B212BAE4-3FE8-506B-69AC-DC4E1A205DD6">
+<Column name="role_id" id="860F1957-AF01-F047-1110-0BAEEFF3AF29">
 <createdBy>italonapalm</createdBy>
-<createdTime>2017-09-14 00:36:17 UTC</createdTime>
+<createdTime>2017-10-12 20:04:33 UTC</createdTime>
 <ownerDesignName>gym</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -41,40 +41,40 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="FA34702D-93BE-FCD1-FC96-7496E4AAE205" referredColumn="568EE8AD-51AB-F1A1-CEE5-B6ED413C4A8C"/>
+<colAssociation fkAssociation="8696ED5B-81BE-C1A2-61E6-DA115493C0B9" referredColumn="5F55BA90-0B0A-0A4C-B197-922D49DEE775"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="DBC521B1-AB25-B77B-318C-F465FCC98BCD" name="Gym_Student_PK">
+<ind_PK_UK id="A309EE8F-F79E-68EA-3D33-EF797101EACF" name="Profile_Role_PK">
 <createdBy>italonapalm</createdBy>
-<createdTime>2017-09-14 00:35:45 UTC</createdTime>
+<createdTime>2017-10-12 20:04:13 UTC</createdTime>
 <ownerDesignName>gym</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="1EB3496C-534C-F783-D902-7698EE676E90"/>
+<colUsage columnID="29733DE3-7562-74BA-F630-6CBB4819D6F0"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="320DC8B5-482F-88DB-449B-80D1E11386E1" name="Gym_Student_Gym_FK">
+<ind_PK_UK id="3E517486-7B1D-8130-D97F-C559E2F2DD2C" name="Profile_Role_Profile_FK">
 <createdBy>italonapalm</createdBy>
-<createdTime>2017-09-14 00:37:13 UTC</createdTime>
+<createdTime>2017-10-12 20:04:56 UTC</createdTime>
 <ownerDesignName>gym</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="4DCC0785-DD5E-00D9-149F-5754FB223BF8"/>
+<colUsage columnID="33F8C761-E4A6-AD4D-9FE6-6A7911C264A5"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="64F05B45-1ACF-6E9B-F7F9-D0C6341F2E61" name="Gym_Student_Student_FK">
+<ind_PK_UK id="F9EDED3E-A8A1-4013-C826-95E64B53BDFC" name="Profile_Role_Role_FK">
 <createdBy>italonapalm</createdBy>
-<createdTime>2017-09-14 00:37:24 UTC</createdTime>
+<createdTime>2017-10-12 20:05:04 UTC</createdTime>
 <ownerDesignName>gym</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="B212BAE4-3FE8-506B-69AC-DC4E1A205DD6"/>
+<colUsage columnID="860F1957-AF01-F047-1110-0BAEEFF3AF29"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

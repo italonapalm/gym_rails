@@ -1,5 +1,5 @@
 class Backoffice::GymsController < BackofficeController
-  before_action :set_gym, only: [:show, :edit, :update, :destroy]
+  before_action :set_gym, only: [:edit, :update, :destroy]
 
   def index
     @gym = Gym.new
@@ -12,9 +12,6 @@ class Backoffice::GymsController < BackofficeController
         format.js
       end
     end
-  end
-
-  def show
   end
 
   def new

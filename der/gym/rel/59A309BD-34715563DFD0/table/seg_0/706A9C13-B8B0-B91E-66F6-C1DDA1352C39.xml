@@ -90,6 +90,51 @@
 <colAssociation fkAssociation="30A34D9D-D8F2-5706-0ACD-EE6DD0B5E4FA" referredColumn="7D9028DB-BED9-232A-F796-FBADD2D9FF18"/>
 </associations>
 </Column>
+<Column name="full_name" id="CD594DCD-A84E-6841-52BC-401D55712D14">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-25 23:33:42 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="active" id="261457DC-B04A-CDC0-B1D9-9519DBB9295B">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-28 01:16:00 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="4CB10205-217D-9969-FB20-DA9BE9A0F3FC">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-28 01:17:25 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="sex" id="CE6E2BEF-BB92-FBC0-2637-51D5E0F15547">
+<createdBy>italonapalm</createdBy>
+<createdTime>2017-09-28 01:18:16 UTC</createdTime>
+<ownerDesignName>gym</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="352F474A-A7A4-8CD6-C90F-EC0F3239C4A4" name="Students_PK">

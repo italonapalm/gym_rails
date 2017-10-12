@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171008005018) do
+ActiveRecord::Schema.define(version: 20171012200222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,14 @@ ActiveRecord::Schema.define(version: 20171008005018) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["city_id"], name: "index_addresses_on_city_id"
+  end
+
+  create_table "admin_profiles", force: :cascade do |t|
+    t.bigint "admin_id"
+    t.bigint "profile_id"
+    t.boolean "active"
+    t.index ["admin_id"], name: "index_admin_profiles_on_admin_id"
+    t.index ["profile_id"], name: "index_admin_profiles_on_profile_id"
   end
 
   create_table "admins", force: :cascade do |t|
@@ -72,6 +80,30 @@ ActiveRecord::Schema.define(version: 20171008005018) do
     t.boolean "active", default: true
   end
 
+  create_table "profile_roles", force: :cascade do |t|
+    t.bigint "profile_id"
+    t.bigint "role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["profile_id"], name: "index_profile_roles_on_profile_id"
+    t.index ["role_id"], name: "index_profile_roles_on_role_id"
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "roles", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "states", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -95,8 +127,12 @@ ActiveRecord::Schema.define(version: 20171008005018) do
   end
 
   add_foreign_key "addresses", "cities"
+  add_foreign_key "admin_profiles", "admins"
+  add_foreign_key "admin_profiles", "profiles"
   add_foreign_key "cities", "states"
   add_foreign_key "gym_students", "gyms"
   add_foreign_key "gym_students", "students"
+  add_foreign_key "profile_roles", "profiles"
+  add_foreign_key "profile_roles", "roles"
   add_foreign_key "students", "addresses"
 end

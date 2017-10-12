@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   namespace :backoffice do
     resources :gyms
     resources :students
+    resources :roles
 
     get '/states/:state_id/cities', to: 'cities#cities_of_state'
   end
