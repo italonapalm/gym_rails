@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :gyms
     resources :students
     resources :roles
+    resources :profiles
 
     get '/states/:state_id/cities', to: 'cities#cities_of_state'
   end

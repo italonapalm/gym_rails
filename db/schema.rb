@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(version: 20171012200222) do
   create_table "profiles", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

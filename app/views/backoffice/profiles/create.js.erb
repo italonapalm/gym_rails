@@ -1,0 +1,13 @@
+<% unless @profile.errors.any? %>
+  $('div.errors').html('');
+  $('table tbody').append("<tr id='profile-row-<%= @profile.id %>'><%= j render :partial => 'backoffice/profiles/shared/profile_row', locals: {profile: @profile} %></tr>");
+  $('#profile_name').val('').focus();
+<% else %>
+  $('div.errors').html('').append("<%= j render :partial => 'backoffice/profiles/shared/profile_errors', locals: {profile: @profile} %>");
+<% end %>
+
+<% if notice.present? %>
+  toastr["success"]("<%= notice %>");
+<% else %>
+  toastr["error"]("<%= alert %>");
+<% end %>

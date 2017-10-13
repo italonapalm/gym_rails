@@ -1,0 +1,16 @@
+<%= simple_form_for [:backoffice, @profile], remote: true, html: { multipart: true, novalidate: false } do |f| %>
+    <div class="modal-body">
+      <div class="errors"></div>
+      <%= f.input :name, input_html: { class: 'form-control' }, required: true, autofocus: true %>
+
+      <%= f.input :role_ids, collection: Role.ascending_name_order, as: :check_boxes, label_method: :name, value_method: :id %>
+
+      <%= f.error :name %>
+    </div>
+    <div class="modal-footer">
+      <%= button_tag type: :reset, class: "btn btn-default", "data-dismiss": "modal" do %>
+        <%= I18n.t 'buttons.close' %>
+      <% end %>
+      <%= f.button :submit, class: "btn btn-primary" %>
+    </div>
+<% end %>

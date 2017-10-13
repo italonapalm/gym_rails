@@ -6,7 +6,7 @@ class Student < ApplicationRecord
   has_many :gyms, through: :gym_students
 
   accepts_nested_attributes_for :address
-  accepts_nested_attributes_for :gym_students, reject_if: :all_blank, allow_destroy: true
+  #accepts_nested_attributes_for :gym_students, reject_if: :all_blank, allow_destroy: true
 
   # Validates
 

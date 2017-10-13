@@ -1,0 +1,4 @@
+$('tr#profile-row-<%= @profile.id %>').html("<%= j render partial: 'backoffice/profiles/shared/profile_row', locals: {profile: @profile} %>");
+$('#modal').modal('hide');
+
+toastr["success"]("<%= flash[:notice] %>");

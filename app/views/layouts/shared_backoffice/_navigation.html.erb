@@ -32,14 +32,37 @@
                                         <%= Student.model_name.human %>
                                     <% end %>
                                 </li>
-                                <li><a href="layout-horizontal-menu.html">Horizontal Menu</a></li>
-                                <li><a href="layout-horizontal-menu-boxed.html">Boxed &amp; Horizontal Menu</a></li>
-                                <li><a href="layout-horizontal-menu-minimal.html">Horizontal Menu Minimal</a></li>
-                                <li><a href="layout-fixed-sidebar.html">Fixed Sidebar</a></li>
-                                <li><a href="layout-static-header.html">Static Header</a></li>
-                                <li><a href="layout-collapsed-sidebar.html">Collapsed Sidebar</a></li>
-                                <li><a href="layout-compact-menu.html">Compact Menu</a></li>
-                                <li><a href="layout-hover-menu.html">Hover Menu</a></li>
+                                <li class="<%= 'active' if params[:controller] == 'backoffice/profiles' %>">
+                                    <%= link_to backoffice_profiles_path do %>
+                                        <%= Profile.model_name.human %>
+                                    <% end %>
+                                </li>
+                                <li class="<%= 'active' if params[:controller] == 'backoffice/roles' %>">
+                                    <%= link_to backoffice_roles_path do %>
+                                        <%= Role.model_name.human %>
+                                    <% end %>
+                                </li>
+
+
+                                <li class="droplink">
+                                    <a href="#">
+                                        <p>Segurança</p>
+                                        <span class="arrow"></span>
+                                    </a>
+                                    <ul class="sub-menu" style="display: none !important;">
+                                        <li class="droplink">
+                                            <a href="#">
+                                                <p>Level 2.1</p>
+
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Level 2.2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+
                             </ul>
                         </li>
 

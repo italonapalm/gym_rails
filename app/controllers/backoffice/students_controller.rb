@@ -1,5 +1,5 @@
 class Backoffice::StudentsController < BackofficeController
-  before_action :set_student, only: [:show, :edit, :update, :destroy]
+  before_action :set_student, only: [:edit, :update, :destroy]
 
   def index
     @student = Student.new
@@ -63,7 +63,6 @@ class Backoffice::StudentsController < BackofficeController
 
   def create
     @student = Student.new(student_params)
-    #@student.gym_students = @student.gym_students.each { |gs| gs.active = true }
 
     respond_to do |format|
       if @student.save
