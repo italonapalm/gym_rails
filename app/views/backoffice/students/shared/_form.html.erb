@@ -1,13 +1,7 @@
 <%= simple_form_for [:backoffice, @student], remote: true, html: { multipart: true, novalidate: false } do |f| %>
     <div class="modal-body">
       <div class="errors"></div>
-
-      <div class="checkbox">
-        <%= f.collection_check_boxes :gym_ids, Gym.all, :id, :name do |gym| %>
-          <%= gym.check_box %>
-          <%= gym.object.name %>
-        <% end %>
-      </div>
+      <%= f.input :gym_ids, collection: Gym.all, as: :check_boxes, label_method: :name, value_method: :id %>
       <div class="form-group">
         <%= f.input :full_name, input_html: { class: 'form-control' }, required: true, autofocus: true %>
       </div>

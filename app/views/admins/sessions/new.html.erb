@@ -9,12 +9,12 @@
                         <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: "m-t-md" }) do |f| %>
 
                             <div class="form-group">
-                                <%= f.input :email, input_html: { class: 'form-control' }, required: false, autofocus: true, placeholder: "Email", label: false %>
+                                <%= f.input :email, input_html: { class: 'form-control' }, required: false, autofocus: true, placeholder: "#{t('activerecord.attributes.admin.email')}", label: false %>
                             </div>
                             <div class="form-group">
-                                <%= f.input :password, input_html: { class: 'form-control' }, required: false, placeholder: "Password", label: false %>
+                                <%= f.input :password, input_html: { class: 'form-control' }, required: false, placeholder: "#{t('activerecord.attributes.admin.password')}", label: false %>
                             </div>
-                            <%= f.button :submit, "Log in", class: "btn btn-success btn-block" %>
+                            <%= f.button :submit, "#{t('buttons.enter')}", class: "btn btn-success btn-block" %>
 
                             <%= render "admins/shared/links" %>
                         <% end %>

@@ -13,6 +13,36 @@ namespace :dev do
     puts %x(rake dev:generate_students)
   end
 
+  desc "Create Profiles"
+  task generate_profiles: :environment do
+    puts "Registering PROFILES"
+    profile = Profile.new(
+      name: 'Administrador'
+    )
+    Role.each do |role|
+      profile.role << role
+    end
+    profile.save
+
+    puts "PROFILES successfully registered!"
+  end
+
+  desc "Create Default Admin"
+  task default_admin: :environment do
+    puts "Registering ADMIN"
+    admin = Admin.new(
+      email: 'admin@admin.com',
+      password: '123456',
+      password_confirmation: '123456',
+      active: true
+    )
+    admin.profiles << Profile.where(name: 'Administrador')
+    admin.save!
+
+
+    puts "ADMIN successfully registered!"
+  end
+
   desc "Create Gyms"
   task generate_gyms: :environment do
     puts "Registering GYMS"

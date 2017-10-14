@@ -33,6 +33,12 @@
       admin_profile:
         one: Perfil
         other: Perfis
+      role:
+        one: Permissão
+        other: Permissões
+      profile:
+        one: Perfil de Usuário
+        other: Perfis de Usuários
     attributes:
       gym:
         id: Código
@@ -48,6 +54,7 @@
         cpf: CPF
         rg: Identidade
         sex: Sexo
+        gym_ids: Academia
       address:
         id: Código
         neighborhood: Bairro
