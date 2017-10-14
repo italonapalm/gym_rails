@@ -18,15 +18,21 @@
       student:
         one: Aluno
         other: Alunos
-      Address:
+      address:
         one: Endereço
         other: Endereços
-      City:
+      city:
         one: Cidade
         other: Cidades
-      State:
+      state:
         one: Estado
         other: Estados
+      admin:
+        one: Usuário
+        other: Usuários
+      admin_profile:
+        one: Perfil
+        other: Perfis
     attributes:
       gym:
         id: Código
@@ -57,6 +63,12 @@
       state:
         id: Código
         name: Estado
+      admin:
+        id: Código
+        email: Email
+        password: Senha
+        password_confirmation: Confirmação de senha
+        profile_ids: Perfil
       other:
         state: Estado
     errors:
@@ -68,4 +80,15 @@
               too_short: deve ter no mínimo %{count} caracteres
               too_long: deve ter no máximo %{count} caracteres
               taken: já existe
+            admin_profiles:
+              has_admin_profiles: hahahaha
+            profiles:
+              has_admin_profiles: hahahaha
+            admin_profile:
+              has_admin_profiles: hahahaha
+            has_admin_profiles: hahahaha
+            base:
+              has_admin_profiles: hahahaha
+      messages:
+        association_is_blank: É necessário selecionar pelo menos um %{model}
 

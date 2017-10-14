@@ -1,0 +1,5 @@
+<% admins.each do |admin| %>
+  <tr id="admin-row-<%= admin.id %>">
+    <%= render partial: 'backoffice/admins/shared/admin_row', locals: {admin: admin} %>
+  </tr>
+<% end %>

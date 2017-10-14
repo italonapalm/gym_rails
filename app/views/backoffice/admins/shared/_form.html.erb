@@ -2,8 +2,10 @@
     <div class="modal-body">
       <div class="errors"></div>
       <%= f.input :email, input_html: { class: 'form-control' }, required: true, autofocus: true %>
+      <%= f.input :password, input_html: { class: 'form-control' }, required: @admin.id.blank? ? true : false %>
+      <%= f.input :password_confirmation, input_html: { class: 'form-control' }, required: @admin.id.blank? ? true : false %>
 
-      <%= f.input :profile_ids, collection: Profile.all, as: :check_boxes, label_method: :name, value_method: :id %>
+      <%= f.input :profile_ids, collection: @profiles, as: :check_boxes, label_method: :name, value_method: :id %>
     </div>
     <div class="modal-footer">
       <%= button_tag type: :reset, class: "btn btn-default", "data-dismiss": "modal" do %>

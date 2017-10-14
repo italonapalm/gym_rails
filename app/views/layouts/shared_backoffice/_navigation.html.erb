@@ -32,6 +32,11 @@
                                         <%= Student.model_name.human %>
                                     <% end %>
                                 </li>
+                                <li class="<%= 'active' if params[:controller] == 'backoffice/admins' %>">
+                                    <%= link_to backoffice_admins_path do %>
+                                        <%= Admin.model_name.human %>
+                                    <% end %>
+                                </li>
                                 <li class="<%= 'active' if params[:controller] == 'backoffice/profiles' %>">
                                     <%= link_to backoffice_profiles_path do %>
                                         <%= Profile.model_name.human %>

@@ -1,0 +1,14 @@
+<% unless @admin.errors.any? %>
+  $('div.errors').html('');
+  $('tr#admin-row-<%= @admin.id %>').html("<%= j render partial: 'backoffice/admins/shared/admin_row', locals: {admin: @admin} %>");
+  $('#modal').modal('hide');
+<% else %>
+  $('div.errors').html('').append("<%= j render :partial => 'backoffice/admins/shared/admin_errors', locals: {admin: @admin} %>");
+<% end %>
+
+<% if notice.present? %>
+  toastr["success"]("<%= notice %>");
+<% else %>
+  toastr["error"]("<%= alert %>");
+<% end %>
+
