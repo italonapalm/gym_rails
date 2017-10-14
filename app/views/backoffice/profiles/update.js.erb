@@ -1,4 +1,14 @@
-$('tr#profile-row-<%= @profile.id %>').html("<%= j render partial: 'backoffice/profiles/shared/profile_row', locals: {profile: @profile} %>");
-$('#modal').modal('hide');
+<% unless @profile.errors.any? %>
+  $('div.errors').html('');
+  $('tr#profile-row-<%= @profile.id %>').html("<%= j render partial: 'backoffice/profiles/shared/profile_row', locals: {profile: @profile} %>");
+  $('#modal').modal('hide');
+<% else %>
+  $('div.errors').html('').append("<%= j render :partial => 'backoffice/profiles/shared/profile_errors', locals: {profile: @profile} %>");
+<% end %>
 
-toastr["success"]("<%= flash[:notice] %>");
+<% if notice.present? %>
+  toastr["success"]("<%= notice %>");
+<% else %>
+  toastr["error"]("<%= alert %>");
+<% end %>
+

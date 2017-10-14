@@ -1,4 +1,14 @@
-$('tr#student-row-<%= @student.id %>').html("<%= j render partial: 'backoffice/students/shared/student_row', locals: {student: @student} %>");
-$('#modal').modal('hide');
+<% unless @student.errors.any? %>
+  $('div.errors').html('');
+  $('tr#student-row-<%= @student.id %>').html("<%= j render partial: 'backoffice/students/shared/student_row', locals: {student: @student} %>");
+  $('#modal').modal('hide');
+<% else %>
+  $('div.errors').html('').append("<%= j render :partial => 'backoffice/students/shared/student_errors', locals: {student: @student} %>");
+<% end %>
 
-toastr["success"]("<%= flash[:notice] %>");
+<% if notice.present? %>
+  toastr["success"]("<%= notice %>");
+<% else %>
+  toastr["error"]("<%= alert %>");
+<% end %>
+

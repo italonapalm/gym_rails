@@ -5,10 +5,9 @@ class Student < ApplicationRecord
   has_many :gym_students
   has_many :gyms, through: :gym_students
 
-  accepts_nested_attributes_for :address
-  #accepts_nested_attributes_for :gym_students, reject_if: :all_blank, allow_destroy: true
-
   # Validates
+  accepts_nested_attributes_for :address
+  validate :has_gym_students
 
   # Constants
   PER_PAGE_ITEMS = 6
@@ -36,6 +35,11 @@ class Student < ApplicationRecord
       self.last_name = self.name
       self.first_name = self.name
     end
+  end
+
+  def has_gym_students
+    message = I18n.t "activerecord.errors.messages.association_is_blank", model: Gym.model_name.human
+    errors.add(:base, message) if self.gym_students.size == 0
   end
 
 
