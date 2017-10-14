@@ -1,5 +1,6 @@
-class AdminController < BackofficeController
+class Backoffice::AdminsController < BackofficeController
   def index
-    @admins = Admin.all
+    @admin = Admin.new
+    @admins = Admin.actives
   end
 end
